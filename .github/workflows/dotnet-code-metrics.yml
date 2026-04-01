@@ -6,6 +6,12 @@ on:
     paths:
     - 'github-actions/DotNet.GitHubAction/**'               # run on all changes to this dir
     - '!github-actions/DotNet.GitHubAction/CODE_METRICS.md' # ignore this file
+  pull_request:
+    branches: [ main ]  
+    paths:
+    - 'github-actions/DotNet.GitHubAction/**'               # run on all changes to this dir
+    - '!github-actions/DotNet.GitHubAction/CODE_METRICS.md' # ignore this file
+
   workflow_dispatch:
     inputs:
       reason:
