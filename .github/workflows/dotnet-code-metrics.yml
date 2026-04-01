@@ -46,6 +46,8 @@ jobs:
       uses: dotnet/actions-create-pull-request@v4
       if: ${{ steps.dotnet-code-metrics.outputs.updated-metrics }} == 'true'
       with:
+        persist-credentials: false  
+        token: ${{ secrets.GITHUB_TOKEN }}
         title: '${{ steps.dotnet-code-metrics.outputs.summary-title }}'
         body: '${{ steps.dotnet-code-metrics.outputs.summary-details }}'
         commit-message: '.NET code metrics, automated pull request.'
