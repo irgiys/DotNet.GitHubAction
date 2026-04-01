@@ -5,7 +5,7 @@
 static TService Get<TService>(IHost host)
     where TService : notnull =>
     host.Services.GetRequiredService<TService>();
-
+// new comment 
 static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
 {
     using ProjectWorkspace workspace = Get<ProjectWorkspace>(host);
